@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Mac Book Pro</title>
+    <!-- Tailwind Stylesheet -->
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+
+<body>
+    <main class="pb-10">
+        <section class="container mx-auto px-4 mt-10">
+            <div class="grid grid-cols-2 gap-4 border-b-2 border-black pb-10">
+                <div>
+                    <img class="w-9/12" src="images/mac.png" alt="Mac book pro">
+                </div>
+                <!-- Mac book configuration && customize -->
+                <div>
+                    <header>
+                        <h1 class="text-4xl">Apple M1 Chip with 8-Core CPU and 8-Core GPU 256GB Storage</h1>
+                        <p class="mt-6 text-lg">
+                            Apple M1 chip with 8-core CPU, 8-core GPU, and 16-core Neural Engine 8GB unified memory
+                            256GB
+                            SSD storage¹ 13-inch Retina display with True Tone Magic Keyboard Touch Bar and Touch ID
+                            Force Touch trackpad Two Thunderbolt / USB 4 ports
+                        </p>
+                    </header>
+                    <!-- Customize Configuration -->
+
+                    <!-- Memory Section -->
+                    <section>
+                        <h2 class="text-1xl font-bold mt-6">Memory</h2>
+                        <div class="grid grid-cols-2 gap-2 mt-4 w-3/4">
+                            <button id="8GBRam" class="border rounded w-full text-md py-2 px-2">8GB unified memory</button>
+                            <button id="16GBRam" class="border rounded w-full text-md py-2 px-2">16GB unified memory</button>
+                        </div>
+                    </section>
+
+                    <!-- Storage Section -->
+                    <section>
+                        <h2 class="text-1xl font-bold mt-6">Storage</h2>
+                        <div class="grid grid-cols-3 gap-2 mt-4 w-11/12">
+                            <button id="256GBSSD" class="border rounded w-full text-md py-2 px-2">256GB SSD Storage</button>
+                            <button id="512GBSSD" class="border rounded w-full text-md py-2 px-2">512GB SSD Storage</button>
+                            <button id="1TBSSD" class="border rounded w-full text-md py-2 px-2">1TB SSD Storage</button>
+                        </div>
+                    </section>
+
+                    <!-- Delivery option -->
+                    <section>
+                        <h2 class="text-1xl font-bold mt-6">Choose your delivery option</h2>
+                        <div class="grid grid-cols-2 gap-2 mt-4 w-full">
+                            <button id="freeDelivery" class="border rounded w-full text-md py-2 px-2">Friday, Aug 25 FREE Prime Delivery</button>
+                            <button id="expressDelivery" class="border rounded w-full text-md py-2 px-2">Friday, Aug 21 Delivery Charge $20</button>
+                        </div>
+                    </section>
+
+                    <!-- Counter section -->
+                    <section>
+                        <table class="table-auto mt-10">
+                            <tbody>
+                                <!-- Best price -->
+                              <tr class="border-b-2">
+                                <td>Best Price</td>
+                                <td>$<span class="everyPrice">1299</span></td>
+                              </tr>
+
+                              <!-- Memory cost -->
+                              <tr class="border-b-2">
+                                <td class="pr-52">Extra Memory Cost</td>
+                                <td>$<span class="everyPrice" id="extraMemoryCost">0</span></td>
+                              </tr>
+
+                              <!-- Storage cost -->
+                              <tr class="border-b-2">
+                                <td>Extra Storage Cost</td>
+                                <td>$<span class="everyPrice" id="extraStorageCost">0</span></td>
+                              </tr>
+
+                              <!-- Delivery charge -->
+                              <tr class="border-b-2 border-black">
+                                <td>Delivery Charge</td>
+                                <td>$<span class="everyPrice" id="deliveryCost">0</span></td>
+                              </tr>
+
+                              <!-- Total -->
+                              <tr>
+                                <td class="font-bold">Total</td>
+                                <td>$<span id="total">1299</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </section>
+
+                    <!-- Apply promo code -->
+                    <section class="mt-10">
+                        <h3 class="text-lg font-bold">Add Promo Code</h3>
+                        <div>
+                            <input id="enterPromoCode" class="border rounded border-black py-1 px-2 text-2xl" type="text">
+                            <div><strong id="invalidPromo" class="text-red-500">Opps!! invalid promo code</strong></div>
+                            <div><strong id="typePromoCode" class="text-red-500">Please type a promo code</strong></div>
+                            <button id="applyPromo" class="bg-purple-600 mt-5 rounded text-white py-2 px-5">Apply</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- Total Price -->
+            <h2 class="text-4xl text-center font-bold">Total: $<span id="finalPrice">1299</span></h2>
+        </section>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="js/configuration.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+
+</html>
